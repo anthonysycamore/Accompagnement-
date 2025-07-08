@@ -43,7 +43,7 @@ document.getElementById('booking-form').addEventListener('submit', function(e) {
     duration: parseInt(formData.get('duration')),
     notes: formData.get('notes')
   };
-	alert(data);
+	alert(JSON.stringify(data));
 
   fetch(WEB_APP_URL, {
     method: 'POST',
