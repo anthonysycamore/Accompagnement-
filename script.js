@@ -1,7 +1,6 @@
 const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxqb41E7aZXPzll0fjPo4CURh2r3BvOsx_RzCP4PL1tN7LZf_5FqBBLKoL3d2PkAaZw/exec'; // replace with your actual deployed script URL
 
 function fetchBookings() {
-	alert("hello");
   fetch(WEB_APP_URL)
     .then(res => res.json())
     .then(data => {
@@ -44,6 +43,7 @@ document.getElementById('booking-form').addEventListener('submit', function(e) {
     duration: parseInt(formData.get('duration')),
     notes: formData.get('notes')
   };
+	alert(data);
 
   fetch(WEB_APP_URL, {
     method: 'POST',
